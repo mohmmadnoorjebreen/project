@@ -34,3 +34,19 @@ margin-left: 220px;
 h1 {
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+main ol {
+    background-color: darkgoldenrod;
+}
+
+main ol :nth-child(odd){
+    color: blue;
+}
+
+main ul {
+    background-color: chartreuse;
+}
+
+main ul :nth-child(even){
+    color: rgb(253, 5, 5);
+}
