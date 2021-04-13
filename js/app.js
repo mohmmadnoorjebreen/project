@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 /* eslint-disable no-trailing-spaces */
 'use strict';
 
@@ -101,7 +102,13 @@ if(number !== '10'){
   if (number !== '10'){
     alert('Unfortunately, your four attempts have ended, The correct answer is 10');
   }
+  if (number === '10') {
+      
+    alert('well done , The correct answer is 10');
+    out.push(1);
+  }
 }
+
 else {
   alert('well done , The correct answer is 10');
   out.push(1);
@@ -126,6 +133,10 @@ if(array !== traveled[0] && array !== traveled[1] && array !== traveled[2] && ar
   }
   if (array !== traveled[0] && array !== traveled[1] && array !== traveled[2] && array !== traveled[3] && array !== traveled[4] && array !== traveled[5]){
     alert('Unfortunately, your four attempts have ended, The correct answer is Paris,Rome,New York City,Peru,Athens,India');
+  }
+  else{
+    alert('well done , The correct answer is Paris,Rome,New York City,Peru,Athens,India');
+    out.push(1);
   }
 }
 else {
