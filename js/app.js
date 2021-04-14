@@ -81,39 +81,41 @@ alert('Thank you for your time, '+user+'.\n If you get 3 or more correct answers
 
 let number = prompt('The sixth question \n Guess a number between 1 and 20 \n This number is my favorite number');
 console.log(number);
-
-if(number !== '10'){
-  for (let index = 0; index < 3; index++) {
-    if (number === '10') {
+function guessNumber (number) {
+  if(number !== '10'){
+    for (let index = 0; index < 3; index++) {
+      if (number === '10') {
+        
+        alert('well done , The correct answer is 10');
+        out.push(1);
+        index=3;
+      } else if (number <10){alert(' guess is too low');
+        number = prompt('Try again with a larger number');}
       
+      else
+      {
+        alert('guess is too high');
+        number = prompt('Try again with a lower number');
+      }
+       
+    }
+    if (number !== '10'){
+      alert('Unfortunately, your four attempts have ended, The correct answer is 10');
+    }
+    if (number === '10') {
+        
       alert('well done , The correct answer is 10');
       out.push(1);
-      index=3;
-    } else if (number <10){alert(' guess is too low');
-      number = prompt('Try again with a larger number');}
-    
-    else
-    {
-      alert('guess is too high');
-      number = prompt('Try again with a lower number');
     }
-     
   }
-  if (number !== '10'){
-    alert('Unfortunately, your four attempts have ended, The correct answer is 10');
-  }
-  if (number === '10') {
-      
+  
+  else {
     alert('well done , The correct answer is 10');
     out.push(1);
   }
+  
 }
-
-else {
-  alert('well done , The correct answer is 10');
-  out.push(1);
-}
-
+guessNumber(number)
 let traveled = ['paris','rome','new york city','peru','athens','india'];
 let array = prompt('7th question\n I have visited a lot places in my life, in fact I have visited to 6 different places,\n I want you to guess one of these places, you have six attempts');
 console.log(array);
