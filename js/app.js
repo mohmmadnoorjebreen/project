@@ -9,8 +9,8 @@ alert('Welcome '+ user+', to my page');
 
 let myName = prompt('Well ' + user+', now I want to do a quick quiz of 5 questions for you \n to determine how much you know about me\n'+'The first question: Is my name Muhammad,\n (answer with yes or no, y or n)');
 myName= myName.toLocaleLowerCase();
-//console.log(myName);
-function q1(myName){
+
+function yesTrue(myName){
   switch(myName) {
   case 'yes':
     alert('Well done, thats right');
@@ -31,12 +31,12 @@ function q1(myName){
     break;
   }
 }
-q1(myName);
+yesTrue(myName);
 
 let sport = prompt('The second question, is basketball my favorite sport?\n'+'(answer with yes or no, y or n)');
 sport= sport.toLocaleLowerCase();
-//console.log(sport);
-function q2(sport){
+
+function noTure(sport){
   switch(sport) {
   case 'yes':
     alert('Unfortunately, wrong answer.');
@@ -57,30 +57,30 @@ function q2(sport){
     break;
   }
 }
-q2(sport);
+noTure(sport);
 
 let major = prompt('The third question, was my college major a sport?\n'+'(answer with yes or no, y or n)');
 major= major.toLocaleLowerCase();
-//console.log(major);
-q2(major);
+
+noTure(major);
 
 
 let goal = prompt('The fourth question, is it one of my goals to be a software developer?\n'+'(answer with yes or no, y or n)');
 goal= goal.toLocaleLowerCase();
-//console.log(goal);
-q1(goal);
+
+yesTrue(goal);
 
 let age = prompt('The fifth question, am I 23 years old?\n'+'(answer with yes or no, y or n)');
 age =age.toLocaleLowerCase();
-//console.log(age);
-q1(age);
+
+yesTrue(age);
 
 
 alert('Thank you for your time, '+user+'.\n If you get 3 or more correct answers, that means you know me well');
 
 
 let number = prompt('The sixth question \n Guess a number between 1 and 20 \n This number is my favorite number');
-console.log(number);
+
 function guessNumber (number) {
   if(number !== '10'){
     for (let index = 0; index < 3; index++) {
@@ -118,7 +118,7 @@ function guessNumber (number) {
 guessNumber(number)
 let traveled = ['paris','rome','new york city','peru','athens','india'];
 let array = prompt('7th question\n I have visited a lot places in my life, in fact I have visited to 6 different places,\n I want you to guess one of these places, you have six attempts');
-console.log(array);
+
 array = array.toLocaleLowerCase();
 
 if(array !== traveled[0] && array !== traveled[1] && array !== traveled[2] && array !== traveled[3] && array !== traveled[4] && array !== traveled[5]) {
